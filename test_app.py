@@ -1,9 +1,21 @@
-from app import predict_result
+from app import calculate_grade, scholarship_eligible
 
 
-def test_pass_student():
-    assert predict_result(75) == "PASS"
+def test_grade_a():
+    assert calculate_grade(95) == "A"
 
 
-def test_fail_student():
-    assert predict_result(30) == "FAIL"
+def test_grade_b():
+    assert calculate_grade(82) == "B"
+
+
+def test_grade_fail():
+    assert calculate_grade(35) == "F"
+
+
+def test_scholarship_eligible():
+    assert scholarship_eligible(85, 80) is True
+
+
+def test_scholarship_not_eligible():
+    assert scholarship_eligible(85, 70) is False
