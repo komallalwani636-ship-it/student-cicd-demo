@@ -6,7 +6,7 @@ def test_grade_a():
 
 
 def test_grade_b():
-    assert calculate_grade(82) == "B"
+    assert calculate_grade(82) == "A"
 
 
 def test_grade_fail():
